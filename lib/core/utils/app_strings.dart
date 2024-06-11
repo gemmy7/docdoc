@@ -12,4 +12,6 @@ class AppStrings {
   static const String haveAccount = 'Already have an account?';
   static const String onboardingHint =
       'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.';
+  static const String loginHint =
+      'We\'re excited to have you back, can\'t wait to see what you\'ve been up to since you last logged in.';
 }

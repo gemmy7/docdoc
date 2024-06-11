@@ -33,7 +33,7 @@ class OnboardingContent extends StatelessWidget {
           child: Text(
             AppStrings.bestDoctor,
             textAlign: TextAlign.center,
-            style: TextStyles.font32BlueBold.copyWith(
+            style: AppTextStyles.font32BlueBold.copyWith(
               height: 1.4,
             ),
           ),

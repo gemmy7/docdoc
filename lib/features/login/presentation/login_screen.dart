@@ -1,3 +1,9 @@
+import 'package:docdoc/core/themes/text_style.dart';
+import 'package:docdoc/core/utils/app_strings.dart';
+import 'package:docdoc/core/widgets/custom_text_button.dart';
+import 'package:docdoc/features/login/presentation/widgets/dont_have_account.dart';
+import 'package:docdoc/features/login/presentation/widgets/email_and_password.dart';
+import 'package:docdoc/features/login/presentation/widgets/terms_and_condations.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -5,8 +11,58 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text('data'),
-    );
+    return Scaffold(
+        body: SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 94),
+              Text(
+                AppStrings.welcome,
+                style: AppTextStyles.font24BlueBold,
+                textAlign: TextAlign.left,
+              ),
+              const SizedBox(height: 10),
+              Text(
+                AppStrings.loginHint,
+                style: AppTextStyles.font14GrayRegular,
+              ),
+              const SizedBox(height: 30),
+              Column(
+                children: [
+                  const EmailAndPassword(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional.centerEnd,
+                    child: Text(AppStrings.forgotPassword,
+                        style: AppTextStyles.font13BlueRegular),
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  CustomTextButton(
+                      buttonText: AppStrings.login,
+                      textStyle: AppTextStyles.font16WhiteMedium,
+                      onPressed: () {}),
+                  const SizedBox(
+                    height: 120,
+                  ),
+                  const TermsAndConditionsText(),
+                  const SizedBox(
+                    height: 60,
+                  ),
+                  const DontHaveAccountText(),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    ));
   }
 }
