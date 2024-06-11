@@ -26,7 +26,7 @@ class OnboardingScreen extends StatelessWidget {
                     children: [
                       Text(
                         AppStrings.onboardingHint,
-                        style: TextStyles.font13GrayRegular,
+                        style: AppTextStyles.font13GrayRegular,
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 30),

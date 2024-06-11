@@ -20,7 +20,7 @@ class DocLogoAndName extends StatelessWidget {
         ),
         Text(
           AppStrings.appName,
-          style: TextStyles.font24BlueBold,
+          style: AppTextStyles.font24BlueBold,
         ),
       ],
     );

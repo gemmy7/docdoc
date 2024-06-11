@@ -2,7 +2,7 @@ import 'package:docdoc/core/themes/color.dart';
 import 'package:docdoc/core/themes/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 
-class TextStyles {
+class AppTextStyles {
   static TextStyle font24BlackBold = const TextStyle(
     fontSize: 24,
     fontWeight: FontWeightHelper.bold,
